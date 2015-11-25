@@ -15,21 +15,16 @@ WORKDIR /home/docker
 USER docker
 
 # go to tmp dir
-# clone git
-# go to cloned dir
-# build package
-# install package
-# remove cloned dir in tmp
 RUN     cd /tmp  && \
-
+        # clone git
         git clone https://aur.archlinux.org/oscam-svn.git/ && \
-
+        # go to cloned dir
         cd oscam-svn && \
-
+        # build package
         makepkg -s --noconfirm && \
-
+        # install package
         sudo pacman -U --noconfirm oscam-svn-*-x86_64.pkg.tar.xz && \
-
+        # remove cloned dir in tmp
         sudo rm -R /tmp/oscam-svn
 
 #Expose Ports
