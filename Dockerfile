@@ -1,6 +1,6 @@
 FROM pritunl/archlinux:latest
 
-# install GIT and base-devel both needet for aur
+# install GIT and base-devel both needed for aur
 RUN pacman -Syu --noconfirm --needed git base-devel
 
 # no sudo password for users in wheel group
