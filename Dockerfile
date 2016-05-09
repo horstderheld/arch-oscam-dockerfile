@@ -17,7 +17,7 @@ USER docker
 # go to tmp dir
 RUN     cd /tmp  && \
         # clone git
-        git clone https://aur.archlinux.org/oscam-svn.git/ && \
+        git clone https://aur.archlinux.org/oscam-svn/ && \
         # go to cloned dir
         cd oscam-svn && \
         # build package
